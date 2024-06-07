@@ -75,8 +75,8 @@
                                         </div>
                                         <footer class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
                                         </footer>
                                     </form>
 
@@ -91,19 +91,19 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="deleteProfessorModalLabel{{ professor.id }}">
-                                            Confirmar Exclusão</h5>
+                                            Delete</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body text-start">
-                                        Tem certeza que deseja excluir o professor {{ professor.first_name }} {{
+                                        Are you sure you want to delete the professor {{ professor.first_name }} {{
                                         professor.last_name }}?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancelar</button>
+                                            data-bs-dismiss="modal">Cancel</button>
                                         <a href="{{ url_for('coordinator.delete_professor', professor_id=professor.id) }}"
-                                            class="btn btn-danger">Excluir</a>
+                                            class="btn btn-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>

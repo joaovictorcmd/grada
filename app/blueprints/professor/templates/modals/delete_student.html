@@ -5,17 +5,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteStudentModalLabel{{ student.id }}">
-                    Confirmar Exclusão</h5>
+                    Delete</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-start">
-                Tem certeza que deseja excluir o student {{ student.first_name }} {{
+                Are you sure you want to delete the student {{ student.first_name }} {{
                 student.last_name }}?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 <a href="{{ url_for('professor.delete_student', student_id=student.id) }}"
-                    class="btn btn-danger">Excluir</a>
+                    class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
