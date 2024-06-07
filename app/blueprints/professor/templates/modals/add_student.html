@@ -1,0 +1,40 @@
+<!-- Modal para Adicionar Estudante -->
+<div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h5 class="modal-title" id="addStudentModalLabel">Adicionar Estudante</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </header>
+
+            <form action="{{ url_for('professor.add_student') }}" method="post">
+                <div class="modal-body">
+                    <div class="mb-4">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade1" class="form-label">Grade 1</label>
+                        <input type="number" class="form-control" id="grade1" name="grade1" step="any" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade2" class="form-label">Grade 2</label>
+                        <input type="number" class="form-control" id="grade2" name="grade2" step="any" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade3" class="form-label">Grade 3</label>
+                        <input type="number" class="form-control" id="grade3" name="grade3" step="any" required>
+                    </div>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar Estudante</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+</div>

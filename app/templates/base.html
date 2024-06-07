@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/x-icon">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="bg-body-tertiary">
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #024dbe;"
+            aria-label="Dark offcanvas navbar">
+            <div class="container">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="150" height="50"
+                        viewBox="0 0 3444.000000 1208.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,1208.000000) scale(0.100000,-0.100000)" fill="#ffffff"
+                            stroke="none">
+                            <path d="M4130 8124 c-524 -47 -1007 -215 -1335 -462 -217 -164 -345 -287
+    -494 -473 -175 -220 -316 -516 -391 -821 -119 -486 -65 -1080 140 -1523 53
+    -117 181 -334 245 -420 171 -227 404 -434 668 -594 156 -95 349 -180 554 -245
+    158 -49 462 -100 673 -111 128 -7 474 16 628 41 115 19 386 99 507 148 249
+    103 520 271 705 439 152 138 303 307 349 392 21 39 21 45 21 819 l0 779 -917
+    -6 c-504 -4 -919 -10 -923 -14 -3 -4 -4 -192 -2 -416 l4 -408 444 2 c245 1
+    447 0 449 -3 2 -2 5 -74 6 -161 2 -125 -1 -161 -13 -174 -188 -225 -361 -355
+    -596 -447 -222 -87 -413 -116 -641 -96 -265 22 -452 88 -676 238 -152 101
+    -329 270 -413 394 -102 151 -189 351 -228 523 -24 109 -30 399 -10 511 39 225
+    159 482 309 659 227 269 529 444 882 511 184 35 468 19 660 -37 147 -43 371
+    -167 518 -287 l68 -55 37 17 c20 10 156 89 302 175 146 87 324 192 395 233 72
+    42 131 83 133 91 7 34 -255 256 -472 399 -249 165 -648 309 -991 359 -135 19
+    -485 33 -595 23z" />
+                            <path d="M8960 8073 c-1 -5 -1 -1029 0 -2278 l0 -2270 507 0 508 0 3 743 2
+    742 128 2 c321 5 511 5 520 -1 11 -7 116 -194 272 -486 59 -110 147 -274 197
+    -365 239 -438 288 -528 311 -570 13 -25 29 -51 34 -57 8 -10 136 -13 579 -13
+    313 0 569 4 569 8 0 4 -24 46 -53 93 -29 46 -101 163 -159 259 -58 96 -161
+    267 -230 380 -482 791 -518 852 -518 866 0 5 45 29 100 52 284 123 523 353
+    649 623 115 247 177 623 150 917 -36 410 -142 683 -351 900 -108 113 -192 176
+    -335 249 -247 128 -473 184 -823 202 -231 12 -2060 15 -2060 4z m2005 -848
+    c206 -27 352 -90 455 -195 63 -64 102 -137 132 -248 17 -62 21 -107 22 -232 1
+    -168 -12 -236 -69 -364 -47 -106 -198 -239 -320 -281 -126 -43 -180 -47 -707
+    -52 l-508 -5 0 696 0 696 439 0 c336 0 467 -4 556 -15z" />
+                            <path d="M16537 7983 c-20 -49 -105 -257 -188 -463 -84 -206 -197 -485 -252
+    -620 -130 -322 -197 -485 -365 -900 -158 -390 -273 -673 -392 -965 -45 -110
+    -139 -344 -210 -520 -71 -176 -188 -464 -261 -640 -72 -176 -133 -330 -136
+    -343 l-5 -22 518 2 518 3 28 75 c16 41 67 181 114 310 193 527 491 1328 568
+    1525 29 77 112 291 184 475 71 184 164 425 207 535 43 110 106 274 140 365 37
+    98 67 165 75 165 7 0 21 -22 31 -50 9 -27 31 -86 47 -130 16 -44 64 -172 106
+    -285 41 -113 105 -284 141 -380 36 -96 90 -240 119 -320 30 -80 111 -298 181
+    -485 70 -187 155 -416 190 -510 79 -213 428 -1149 458 -1230 l23 -60 534 -3
+    c294 -1 537 1 542 6 4 4 -57 170 -136 367 -167 419 -396 997 -631 1590 -92
+    231 -258 650 -370 930 -111 281 -253 638 -316 795 -62 157 -165 416 -228 575
+    l-116 290 -541 3 -541 2 -36 -87z" />
+                            <path d="M21788 8053 c-2 -9 -2 -1035 0 -2280 l2 -2263 958 0 c1065 0 1000 -4
+    1185 68 223 87 454 329 598 627 73 152 110 268 134 415 19 118 31 350 19 350
+    -5 0 -36 -42 -69 -92 -137 -207 -361 -384 -583 -458 -176 -59 -302 -70 -789
+    -70 l-433 0 0 1431 0 1430 478 -4 c511 -4 521 -5 747 -63 180 -46 449 -177
+    594 -290 24 -18 71 -59 104 -91 325 -310 488 -653 581 -1223 39 -243 22 -599
+    -44 -886 -51 -221 -158 -485 -280 -687 -12 -21 -20 -40 -18 -42 8 -9 144 92
+    223 165 119 111 215 219 298 338 189 270 302 536 366 862 39 202 45 265 44
+    475 0 443 -77 795 -249 1142 -151 305 -370 560 -664 770 -308 220 -693 349
+    -1150 383 -78 6 -542 10 -1092 10 -888 0 -957 -1 -960 -17z" />
+                            <path d="M29969 8043 c-20 -52 -250 -624 -396 -983 -140 -342 -282 -693 -368
+    -905 -40 -99 -102 -252 -138 -340 -36 -88 -129 -317 -207 -510 -78 -192 -162
+    -399 -187 -460 -25 -60 -107 -263 -183 -450 -75 -187 -185 -458 -244 -602 -58
+    -144 -106 -267 -106 -272 0 -8 155 -10 517 -9 l517 3 49 130 c26 72 52 141 57
+    155 4 14 67 185 140 380 72 195 182 495 245 665 63 171 144 387 180 480 36 94
+    145 373 240 620 262 678 370 956 390 1000 l17 40 13 -30 c7 -16 34 -88 60
+    -160 56 -155 189 -512 280 -755 36 -96 83 -222 104 -280 41 -110 260 -699 338
+    -905 25 -66 60 -160 78 -210 35 -95 241 -648 354 -950 l68 -180 542 -3 c514
+    -2 543 -1 538 15 -2 10 -106 272 -230 583 -123 311 -264 664 -312 785 -48 121
+    -156 393 -240 605 -84 212 -228 574 -320 805 -218 550 -441 1110 -584 1470
+    l-116 290 -543 3 -542 2 -11 -27z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Offcanvas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark"
+                    aria-labelledby="offcanvasNavbarDarkLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Profile
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">{{ current_user.first_name }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ current_user.email }}</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <footer class="my-4">
+                <p class="text-center text-body-secondary border-top pt-4 mt-3">
+                    Developed by <a href="https://github.com/joaovictorcmd" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none text-body-secondary">João
+                        Victor Carvalho Machado</a> for Rapid Application Development in Python
+                    (ARA0095 - 2024.1) at <a href="https://estacio.br/" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none text-body-secondary">Estácio de Sá University</a>, Maracanã Campus.
+                    <br>
+                    © 2024 João Victor Carvalho Machado. All rights reserved.
+                </p>
+            </footer>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

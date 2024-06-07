@@ -1,0 +1,22 @@
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteStudentModal{{ student.id }}" tabindex="-1"
+    aria-labelledby="deleteStudentModalLabel{{ student.id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteStudentModalLabel{{ student.id }}">
+                    Confirmar Exclusão</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+                Tem certeza que deseja excluir o student {{ student.first_name }} {{
+                student.last_name }}?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="{{ url_for('professor.delete_student', student_id=student.id) }}"
+                    class="btn btn-danger">Excluir</a>
+            </div>
+        </div>
+    </div>
+</div>

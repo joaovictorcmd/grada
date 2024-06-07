@@ -1,0 +1,11 @@
+.bg-left {
+    background-image: linear-gradient(to top, #0d6efd 0%, #0d6efd 25%, #0a53c1 100%);
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

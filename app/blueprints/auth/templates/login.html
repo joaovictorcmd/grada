@@ -1,0 +1,27 @@
+{% extends "base-auth.html" %}
+
+<!-- Head -->
+{% block title %} Log in | GRADA {% endblock title %}
+
+<!-- Body -->
+{% block content %}
+<form method="post" class="form d-flex flex-column">
+    <header class="text-center mb-2 position-relative">
+        <h1 class="fw-bold mb-2 h3">Log in</h1>
+        <p class="text-secondary">Get access to your account</p>
+    </header>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp">
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Login</button>
+    <p class="text-secondary text-center">
+        Don't have an account? <a href="{{ url_for('auth.sign_up') }}" class="text-decoration-none fw-medium">Sign
+            up</a>
+    </p>
+</form>
+{% endblock content %}

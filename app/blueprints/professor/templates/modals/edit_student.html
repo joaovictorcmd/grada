@@ -1,0 +1,50 @@
+<!-- Edit Modal -->
+<div class="modal fade" id="editStudentModal{{ student.id }}" tabindex="-1"
+    aria-labelledby="editStudentModalLabel{{ student.id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <header class="modal-header">
+                <h5 class="modal-title" id="editStudentModalLabel{{ student.id }}">
+                    Editar Student
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </header>
+
+            <form action="{{ url_for('professor.edit_student', student_id=student.id) }}" method="post">
+                <div class="modal-body text-start">
+                    <div class="mb-4">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName"
+                            value="{{ student.first_name }}" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName"
+                            value="{{ student.last_name }}" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade1" class="form-label">Grade 1</label>
+                        <input type="number" class="form-control" id="grade1" name="grade1"
+                            value="{{ student.grade_1 }}" step="any" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade2" class="form-label">Grade 2</label>
+                        <input type="number" class="form-control" id="grade2" name="grade2"
+                            value="{{ student.grade_2 }}" step="any" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="grade3" class="form-label">Grade 3</label>
+                        <input type="number" class="form-control" id="grade3" name="grade3"
+                            value="{{ student.grade_3 }}" step="any" required>
+                    </div>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </footer>
+            </form>
+
+        </div>
+    </div>
+</div>

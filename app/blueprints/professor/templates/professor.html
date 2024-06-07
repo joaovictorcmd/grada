@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+<!-- Head -->
+{% block title %} Home | GRADA {% endblock title %}
+
+<!-- Body -->
+{% block content %}
+
+<div class="my-3 px-5 py-3 bg-body rounded shadow-sm">
+    <div class="d-flex justify-content-between align-items-center my-2">
+        <h2>Students</h2>
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+            <i class="bi bi-plus-lg"></i> Add Student
+        </button>
+
+        {% include "modals/add_student.html" %}
+    </div>
+
+    <!-- Table  -->
+    <div class="card-body table-responsive table-scroll">
+        <table class="table table-striped table-bordered table-hover align-middle">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col" class="text-end">Grade 1</th>
+                    <th scope="col" class="text-end">Grade 2</th>
+                    <th scope="col" class="text-end">Grade 3</th>
+                    <th scope="col" class="text-end">Average</th>
+                    <th scope="col" class="text-center">Result</th>
+                    <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <th scope="row" class="text-center">{{ student.id }}</th>
+                    <td>{{ student.first_name }}</td>
+                    <td>{{ student.last_name }}</td>
+                    <td class="text-end">{{ student.grade_1 }}</td>
+                    <td class="text-end">{{ student.grade_2 }}</td>
+                    <td class="text-end">{{ student.grade_3 }}</td>
+                    <td class="text-end">{{ student.average }}</td>
+                    {% if student.result == "Passed" %}
+                    <td class="text-success text-center">
+                        <i class="bi bi-check-square-fill"></i>
+                    </td>
+                    {% elif student.result == "Failed" %}
+                    <td class="text-danger text-center">
+                        <i class="bi bi-x-square-fill"></i>
+                    </td>
+                    {% endif %}
+
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                            data-bs-target="#editStudentModal{{ student.id }}">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#deleteStudentModal{{ student.id }}">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+
+                        {% include "modals/edit_student.html" %}
+                        {% include "modals/delete_student.html" %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock content %}
