@@ -11,6 +11,7 @@ def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = "hjshjhdjah kjshkjdhjs"
     app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}"
+    app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
     db.init_app(app)
 
     from .blueprints.auth import auth as auth_blueprint
