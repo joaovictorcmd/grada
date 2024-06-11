@@ -1,54 +1,55 @@
 # GRADA
 
-O projeto "GRADA" demonstra a aplicação de tecnologias modernas na gestão acadêmica. Aqui, você encontrará detalhes, ferramentas utilizadas e guias para executá-lo localmente.
+The "GRADA" project demonstrates the application of modern technologies in academic management. Here, you will find details, tools used, and guides to run it locally.
 
-## ℹ️ Sobre o Projeto
-Consiste em uma aplicação web desenvolvida em Flask, projetada para gerenciar informações acadêmicas de alunos e professores. Oferece funcionalidades robustas de adição, edição e exclusão de dados, implementa autenticação de usuários para garantir segurança e utiliza SQLAlchemy para interação eficiente com o banco de dados. Além disso, utiliza Bootstrap para uma interface de usuário responsiva e moderna.
+## ℹ️ About the Project
 
-## 🛠️ Ferramentas Utilizadas
+It is a web application developed in Flask, designed to manage academic information of students and teachers. It offers robust functionalities for adding, editing, and deleting data, implements user authentication for security, and uses SQLAlchemy for efficient database interaction. Additionally, it utilizes Bootstrap for a responsive and modern user interface.
 
-- Linguagem: Python
+## 🛠️ Tools Used
+
+- Language: Python
 - Framework: Flask
-- Banco de Dados: SQLite
-- Front-end: HTML, CSS, JavaScript e Bootstrap
+- Database: SQLite
+- Front-end: HTML, CSS, JavaScript, and Bootstrap
 
-## 🚀 Executando o Projeto
+## 🚀 Running the Project
 
-Siga as instruções abaixo para executar o projeto em seu ambiente local:
+Follow the instructions below to run the project on your local environment:
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
 
    ```
    git clone https://github.com/joaovictorcmd/grada.git
    ```
 
-1. **Instale as dependências:**
+1. **Install dependencies:**
 
    ```
    pip install -r requirements.txt
    ```
 
-1. **Execute o servidor:**
+1. **Run the server:**
 
    ```
    python main.py
    ```
 
-1. **Acesse a aplicação:**
+1. **Access the application:**
 
-   Abra o seu navegador e digite o seguinte endereço:
+   Open your web browser and enter the following address:
 
    ```
    http://localhost:5000
    ```
 
-Agora você pode começar a utilizar a aplicação, gerenciando professores e alunos, incluindo a criação, visualização, atualização e exclusão de informações conforme necessário.
+Now you can start using the application, managing professors and students, including creating, viewing, updating, and deleting information as needed.
 
-## 📝 Contribuição
+## 📝 Contribution
 
-Se você deseja contribuir com melhorias para o projeto, siga as etapas abaixo:
+If you wish to contribute improvements to the project, follow these steps:
 
-1. Faça um fork do repositório e clone-o em sua máquina.
-1. Crie uma nova branch para suas modificações.
-1. Faça as alterações necessárias e adicione-as ao stage.
-1. Envie um pull request para que suas modificações sejam revisadas.
+1. Fork the repository and clone it to your machine.
+1. Create a new branch for your modifications.
+1. Make the necessary changes and add them to the staging area.
+1. Send a pull request for your modifications to be reviewed.
